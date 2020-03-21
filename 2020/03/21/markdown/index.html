@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Learn To Use Markdown Editor! | Fox Chen</title><meta name="description" content="Learn To Use Markdown Editor!"><meta name="author" content="Fox Chen"><meta name="copyright" content="Fox Chen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Learn To Use Markdown Editor!"><meta name="twitter:description" content="Learn To Use Markdown Editor!"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta property="og:type" content="article"><meta property="og:title" content="Learn To Use Markdown Editor!"><meta property="og:url" content="http://yoursite.com/2020/03/21/markdown/"><meta property="og:site_name" content="Fox Chen"><meta property="og:description" content="Learn To Use Markdown Editor!"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/03/21/markdown/"><link rel="next" title="Hello World" href="http://yoursite.com/2020/03/08/hello-world/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"全能,女神,学霸,晴","fontSize":"20px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Fox Chen</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/programmer/"><i class="fa-fw fa fa-book"></i><span> Self cultivation of programmers</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-thumbs-o-up"></i><span> Honor</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> Daily Life</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/vlog/"><i class="fa-fw fa fa-film"></i><span> Vlog</span></a></li><li><a class="site-page" href="/diary/"><i class="fa-fw fa fa-pencil-square-o"></i><span> Diary</span></a></li><li><a class="site-page" href="/delicacy"><i class="fa-fw fa fa-heart"></i><span> Delicacy</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/hello.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">2</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/programmer/"><i class="fa-fw fa fa-book"></i><span> Self cultivation of programmers</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-thumbs-o-up"></i><span> Honor</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> Daily Life</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/vlog/"><i class="fa-fw fa fa-film"></i><span> Vlog</span></a></li><li><a class="site-page" href="/diary/"><i class="fa-fw fa fa-pencil-square-o"></i><span> Diary</span></a></li><li><a class="site-page" href="/delicacy"><i class="fa-fw fa fa-heart"></i><span> Delicacy</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#MdEditor是一个在线编辑Markdown文档的编辑器"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">MdEditor是一个在线编辑Markdown文档的编辑器</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#MdEditor的功能列表演示"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">MdEditor的功能列表演示</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#标题H1"><span class="toc_mobile_items-number"></span> <span class="toc_mobile_items-text">标题H1</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#标题H2"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">标题H2</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#标题H3"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">标题H3</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#标题H4"><span class="toc_mobile_items-number">1.1.1.</span> <span class="toc_mobile_items-text">标题H4</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#标题H5"><span class="toc_mobile_items-number">1.1.1.1.</span> <span class="toc_mobile_items-text">标题H5</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-6"><a class="toc_mobile_items-link" href="#标题H5-1"><span class="toc_mobile_items-number">1.1.1.1.1.</span> <span class="toc_mobile_items-text">标题H5</span></a></li></ol></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#字符效果和横线等"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">字符效果和横线等</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#引用-Blockquotes"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">引用 Blockquotes</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#锚点与链接-Links"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">锚点与链接 Links</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#多语言代码高亮-Codes"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">多语言代码高亮 Codes</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#行内代码-Inline-code"><span class="toc_mobile_items-number">1.5.1.</span> <span class="toc_mobile_items-text">行内代码 Inline code</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#缩进风格"><span class="toc_mobile_items-number">1.5.2.</span> <span class="toc_mobile_items-text">缩进风格</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#JS代码"><span class="toc_mobile_items-number">1.5.3.</span> <span class="toc_mobile_items-text">JS代码</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#HTML-代码-HTML-codes"><span class="toc_mobile_items-number">1.5.4.</span> <span class="toc_mobile_items-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#图片-Images"><span class="toc_mobile_items-number">1.6.</span> <span class="toc_mobile_items-text">图片 Images</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#列表-Lists"><span class="toc_mobile_items-number">1.7.</span> <span class="toc_mobile_items-text">列表 Lists</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#无序列表（减号）Unordered-Lists"><span class="toc_mobile_items-number">1.7.1.</span> <span class="toc_mobile_items-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#无序列表（星号）Unordered-Lists"><span class="toc_mobile_items-number">1.7.2.</span> <span class="toc_mobile_items-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#无序列表（加号和嵌套）Unordered-Lists"><span class="toc_mobile_items-number">1.7.3.</span> <span class="toc_mobile_items-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#有序列表-Ordered-Lists"><span class="toc_mobile_items-number">1.7.4.</span> <span class="toc_mobile_items-text">有序列表 Ordered Lists (-)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#GFM-task-list"><span class="toc_mobile_items-number">1.7.5.</span> <span class="toc_mobile_items-text">GFM task list</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#绘制表格-Tables"><span class="toc_mobile_items-number">1.8.</span> <span class="toc_mobile_items-text">绘制表格 Tables</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#特殊符号-HTML-Entities-Codes"><span class="toc_mobile_items-number">1.8.1.</span> <span class="toc_mobile_items-text">特殊符号 HTML Entities Codes</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#Emoji表情-smiley"><span class="toc_mobile_items-number">1.9.</span> <span class="toc_mobile_items-text">Emoji表情 :smiley:</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><span class="toc_mobile_items-number">1.9.1.</span> <span class="toc_mobile_items-text">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#反斜杠-Escape"><span class="toc_mobile_items-number">1.9.2.</span> <span class="toc_mobile_items-text">反斜杠 Escape</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#科学公式-TeX-KaTeX"><span class="toc_mobile_items-number">1.10.</span> <span class="toc_mobile_items-text">科学公式 TeX(KaTeX)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#分页符-Page-break"><span class="toc_mobile_items-number">1.11.</span> <span class="toc_mobile_items-text">分页符 Page break</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#绘制流程图-Flowchart"><span class="toc_mobile_items-number">1.12.</span> <span class="toc_mobile_items-text">绘制流程图 Flowchart</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#绘制序列图-Sequence-Diagram"><span class="toc_mobile_items-number">1.13.</span> <span class="toc_mobile_items-text">绘制序列图 Sequence Diagram</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#End"><span class="toc_mobile_items-number">1.14.</span> <span class="toc_mobile_items-text">End</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MdEditor是一个在线编辑Markdown文档的编辑器"><span class="toc-number">1.</span> <span class="toc-text">MdEditor是一个在线编辑Markdown文档的编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MdEditor的功能列表演示"><span class="toc-number">2.</span> <span class="toc-text">MdEditor的功能列表演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标题H1"><span class="toc-number"></span> <span class="toc-text">标题H1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题H2"><span class="toc-number">1.</span> <span class="toc-text">标题H2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题H3"><span class="toc-number">1.1.</span> <span class="toc-text">标题H3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标题H4"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题H4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#标题H5"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">标题H5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#标题H5-1"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">标题H5</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符效果和横线等"><span class="toc-number">1.2.</span> <span class="toc-text">字符效果和横线等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用-Blockquotes"><span class="toc-number">1.3.</span> <span class="toc-text">引用 Blockquotes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#锚点与链接-Links"><span class="toc-number">1.4.</span> <span class="toc-text">锚点与链接 Links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多语言代码高亮-Codes"><span class="toc-number">1.5.</span> <span class="toc-text">多语言代码高亮 Codes</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#行内代码-Inline-code"><span class="toc-number">1.5.1.</span> <span class="toc-text">行内代码 Inline code</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#缩进风格"><span class="toc-number">1.5.2.</span> <span class="toc-text">缩进风格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS代码"><span class="toc-number">1.5.3.</span> <span class="toc-text">JS代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-代码-HTML-codes"><span class="toc-number">1.5.4.</span> <span class="toc-text">HTML 代码 HTML codes</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片-Images"><span class="toc-number">1.6.</span> <span class="toc-text">图片 Images</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表-Lists"><span class="toc-number">1.7.</span> <span class="toc-text">列表 Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#无序列表（减号）Unordered-Lists"><span class="toc-number">1.7.1.</span> <span class="toc-text">无序列表（减号）Unordered Lists (-)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#无序列表（星号）Unordered-Lists"><span class="toc-number">1.7.2.</span> <span class="toc-text">无序列表（星号）Unordered Lists (*)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#无序列表（加号和嵌套）Unordered-Lists"><span class="toc-number">1.7.3.</span> <span class="toc-text">无序列表（加号和嵌套）Unordered Lists (+)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有序列表-Ordered-Lists"><span class="toc-number">1.7.4.</span> <span class="toc-text">有序列表 Ordered Lists (-)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GFM-task-list"><span class="toc-number">1.7.5.</span> <span class="toc-text">GFM task list</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绘制表格-Tables"><span class="toc-number">1.8.</span> <span class="toc-text">绘制表格 Tables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊符号-HTML-Entities-Codes"><span class="toc-number">1.8.1.</span> <span class="toc-text">特殊符号 HTML Entities Codes</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Emoji表情-smiley"><span class="toc-number">1.9.</span> <span class="toc-text">Emoji表情 :smiley:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><span class="toc-number">1.9.1.</span> <span class="toc-text">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#反斜杠-Escape"><span class="toc-number">1.9.2.</span> <span class="toc-text">反斜杠 Escape</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#科学公式-TeX-KaTeX"><span class="toc-number">1.10.</span> <span class="toc-text">科学公式 TeX(KaTeX)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分页符-Page-break"><span class="toc-number">1.11.</span> <span class="toc-text">分页符 Page break</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绘制流程图-Flowchart"><span class="toc-number">1.12.</span> <span class="toc-text">绘制流程图 Flowchart</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绘制序列图-Sequence-Diagram"><span class="toc-number">1.13.</span> <span class="toc-text">绘制序列图 Sequence Diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#End"><span class="toc-number">1.14.</span> <span class="toc-text">End</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png)"><div id="post-info"><div id="post-title"><div class="posttitle">Learn To Use Markdown Editor!</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2020-03-21<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2020-03-21</time><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><html><head></head><body><p><strong>Markdown是一种轻量级的「标记语言」</strong></p>
+<p><a href="https://www.mdeditor.com/images/logos/markdown.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="markdown" class="fancybox"><img alt="markdown" title="markdown" data-src="https://www.mdeditor.com/images/logos/markdown.png" class="lazyload"></a></p>
+<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面，Markdown文件的后缀名便是“.md”</p>
+<h2 id="MdEditor是一个在线编辑Markdown文档的编辑器"><a href="#MdEditor是一个在线编辑Markdown文档的编辑器" class="headerlink" title="MdEditor是一个在线编辑Markdown文档的编辑器"></a>MdEditor是一个在线编辑Markdown文档的编辑器</h2><p><em>MdEditor扩展了Markdown的功能（如表格、脚注、内嵌HTML等等），以使让Markdown转换成更多的格式，和更丰富的展示效果，这些功能原初的Markdown尚不具备。</em></p>
+<blockquote>
+<p>Markdown增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如<del>Pandoc</del>，Pandao；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。</p>
+</blockquote>
+<p>MdEditor源于Pandao的JavaScript开源项目，开源地址<a href="https://github.com/pandao/editor.md" target="_blank" rel="noopener" title="Editor.md">Editor.md</a>，并在MIT开源协议的许可范围内进行了优化，以适应广大用户群体的需求。向优秀的markdown开源编辑器原作者Pandao致敬。</p>
+<p><a href="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="Pandao editor.md" class="fancybox"><img alt="Pandao editor.md" title="Pandao editor.md" data-src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" class="lazyload"></a></p>
+<h2 id="MdEditor的功能列表演示"><a href="#MdEditor的功能列表演示" class="headerlink" title="MdEditor的功能列表演示"></a>MdEditor的功能列表演示</h2><h1 id="标题H1"><a href="#标题H1" class="headerlink" title="标题H1"></a>标题H1</h1><h2 id="标题H2"><a href="#标题H2" class="headerlink" title="标题H2"></a>标题H2</h2><h3 id="标题H3"><a href="#标题H3" class="headerlink" title="标题H3"></a>标题H3</h3><h4 id="标题H4"><a href="#标题H4" class="headerlink" title="标题H4"></a>标题H4</h4><h5 id="标题H5"><a href="#标题H5" class="headerlink" title="标题H5"></a>标题H5</h5><h6 id="标题H5-1"><a href="#标题H5-1" class="headerlink" title="标题H5"></a>标题H5</h6><h3 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h3><hr>
+<p><del>删除线</del> <s>删除线（开启识别HTML标签时）</s></p>
+<p><em>斜体字</em>      <em>斜体字</em></p>
+<p><strong>粗体</strong>  <strong>粗体</strong></p>
+<p><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></p>
+<p>上标：X<sub>2</sub>，下标：O<sup>2</sup></p>
+<p><strong>缩写(同HTML的abbr标签)</strong></p>
+<blockquote>
+<p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
+</blockquote>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<h3 id="引用-Blockquotes"><a href="#引用-Blockquotes" class="headerlink" title="引用 Blockquotes"></a>引用 Blockquotes</h3><blockquote>
+<p>引用文本 Blockquotes</p>
+</blockquote>
+<p>引用的行内混合 Blockquotes</p>
+<blockquote>
+<p>引用：如果想要插入空白换行<code>即<br>标签</code>，在插入处先键入两个以上的空格然后回车即可，<a href="https://www.mdeditor.com/" target="_blank" rel="noopener">普通链接</a>。</p>
+</blockquote>
+<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://www.mdeditor.com/" target="_blank" rel="noopener">普通链接</a><br><a href="https://www.mdeditor.com/" target="_blank" rel="noopener" title="普通链接带标题">普通链接带标题</a><br>直接链接：<a href="https://www.mdeditor.com" target="_blank" rel="noopener">https://www.mdeditor.com</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com/</a><br><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a><br>GFM a-tail link @pandao<br>邮箱地址自动链接 <a href="mailto:test.test@gmail.com">test.test@gmail.com</a>  <a href="mailto:www@vip.qq.com">www@vip.qq.com</a></p>
+<blockquote>
+<p>@pandao</p>
+</blockquote>
+<h3 id="多语言代码高亮-Codes"><a href="#多语言代码高亮-Codes" class="headerlink" title="多语言代码高亮 Codes"></a>多语言代码高亮 Codes</h3><h4 id="行内代码-Inline-code"><a href="#行内代码-Inline-code" class="headerlink" title="行内代码 Inline code"></a>行内代码 Inline code</h4><p>执行命令：<code>npm install marked</code></p>
+<h4 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h4><p>即缩进四个空格，也做为实现类似 <code></code></p><pre> 预格式化文本 ( Preformatted Text ) 的功能。<p></p>
+<pre><code><!--?php
+    echo "Hello world!";
+?--></code></pre><p>预格式化文本：</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |</code></pre><h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">html</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">html</span>></span><br><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">head</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">mate</span> <span class="attr">charest</span>=<span class="string">"utf-8"</span> /></span></span><br><span class="line">        <span class="tag"><<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"Editor.md, Markdown, Editor"</span> /></span></span><br><span class="line">        <span class="tag"><<span class="name">title</span>></span>Hello world!<span class="tag"><!--<span class="name"-->title</span>></span><br><span class="line">        <span class="tag"><<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>></span></span><br><span class="line"><span class="css">            <span class="selector-tag">body</span>{<span class="attribute">font-size</span>:<span class="number">14px</span>;<span class="attribute">color</span>:<span class="number">#444</span>;<span class="attribute">font-family</span>: <span class="string">"Microsoft Yahei"</span>, Tahoma, <span class="string">"Hiragino Sans GB"</span>, Arial;<span class="attribute">background</span>:<span class="number">#fff</span>;}</span></span><br><span class="line"><span class="css">            <span class="selector-tag">ul</span>{<span class="attribute">list-style</span>: none;}</span></span><br><span class="line"><span class="css">            <span class="selector-tag">img</span>{<span class="attribute">border</span>:none;<span class="attribute">vertical-align</span>: middle;}</span></span><br><span class="line">        <span class="tag"><!--<span class="name"-->style</span>></span><br><span class="line">    <span class="tag"><!--<span class="name"-->head</span>></span><br><span class="line">    <span class="tag"><<span class="name">body</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"text-xxl"</span>></span>Hello world!<span class="tag"><!--<span class="name"-->h1</span>></span><br><span class="line">        <span class="tag"><<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-green"</span>></span>Plain text<span class="tag"><!--<span class="name"-->p</span>></span><br><span class="line">    <span class="tag"><!--<span class="name"-->body</span>></span><br><span class="line"><span class="tag"><!--<span class="name"-->html</span>></span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h3><p>图片加链接 (Image + Link)：</p>
+<p><a href="https://www.mdeditor.com/images/logos/markdown.png" target="_blank" rel="noopener" title="markdown"><img alt data-src="https://www.mdeditor.com/images/logos/markdown.png" class="lazyload"></a></p>
+<blockquote>
+<p>Follow your heart.</p>
+</blockquote>
+<hr>
+<h3 id="列表-Lists"><a href="#列表-Lists" class="headerlink" title="列表 Lists"></a>列表 Lists</h3><h4 id="无序列表（减号）Unordered-Lists"><a href="#无序列表（减号）Unordered-Lists" class="headerlink" title="无序列表（减号）Unordered Lists (-)"></a>无序列表（减号）Unordered Lists (-)</h4><ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+<h4 id="无序列表（星号）Unordered-Lists"><a href="#无序列表（星号）Unordered-Lists" class="headerlink" title="无序列表（星号）Unordered Lists (*)"></a>无序列表（星号）Unordered Lists (*)</h4><ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+<h4 id="无序列表（加号和嵌套）Unordered-Lists"><a href="#无序列表（加号和嵌套）Unordered-Lists" class="headerlink" title="无序列表（加号和嵌套）Unordered Lists (+)"></a>无序列表（加号和嵌套）Unordered Lists (+)</h4><ul>
+<li>列表一</li>
+<li>列表二<ul>
+<li>列表二-1</li>
+<li>列表二-2</li>
+<li>列表二-3</li>
+</ul>
+</li>
+<li>列表三<ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+</li>
+</ul>
+<h4 id="有序列表-Ordered-Lists"><a href="#有序列表-Ordered-Lists" class="headerlink" title="有序列表 Ordered Lists (-)"></a>有序列表 Ordered Lists (-)</h4><ol>
+<li>第一行</li>
+<li>第二行</li>
+<li>第三行</li>
+</ol>
+<h4 id="GFM-task-list"><a href="#GFM-task-list" class="headerlink" title="GFM task list"></a>GFM task list</h4><ul>
+<li><input checked disabled type="checkbox"> GFM task list 1</li>
+<li><input checked disabled type="checkbox"> GFM task list 2</li>
+<li><input disabled type="checkbox"> GFM task list 3<ul>
+<li><input disabled type="checkbox"> GFM task list 3-1</li>
+<li><input disabled type="checkbox"> GFM task list 3-2</li>
+<li><input disabled type="checkbox"> GFM task list 3-3</li>
+</ul>
+</li>
+<li><input disabled type="checkbox"> GFM task list 4<ul>
+<li><input disabled type="checkbox"> GFM task list 4-1</li>
+<li><input disabled type="checkbox"> GFM task list 4-2</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="绘制表格-Tables"><a href="#绘制表格-Tables" class="headerlink" title="绘制表格 Tables"></a>绘制表格 Tables</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>计算机</td>
+<td align="right">$1600</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td align="right">$12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td align="right">$1</td>
+<td align="center">234</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Function name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>help()</code></td>
+<td>Display the help window.</td>
+</tr>
+<tr>
+<td><code>destroy()</code></td>
+<td><strong>Destroy your computer!</strong></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Left-Aligned</th>
+<th align="center">Center Aligned</th>
+<th align="right">Right Aligned</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">col 3 is</td>
+<td align="center">some wordy text</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th align="right">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Computer</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="特殊符号-HTML-Entities-Codes"><a href="#特殊符号-HTML-Entities-Codes" class="headerlink" title="特殊符号 HTML Entities Codes"></a>特殊符号 HTML Entities Codes</h4><p>© &  ¨ ™ ¡ £<br>& < > ¥ € ® ± ¶ § ¦ ¯ « ·</p>
+<p>X² Y³ ¾ ¼  ×  ÷   »</p>
+<p>18ºC  "  '</p>
+<p>[========]</p>
+<h3 id="Emoji表情-smiley"><a href="#Emoji表情-smiley" class="headerlink" title="Emoji表情 :smiley:"></a>Emoji表情 :smiley:</h3><blockquote>
+<p>Blockquotes :star:</p>
+</blockquote>
+<h4 id="GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x"><a href="#GFM-task-lists-amp-Emoji-amp-fontAwesome-icon-emoji-amp-editormd-logo-emoji-editormd-logo-5x" class="headerlink" title="GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:"></a>GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:</h4><ul>
+<li><input checked disabled type="checkbox"> :smiley: @mentions, :smiley: #refs, <a href>links</a>, <strong>formatting</strong>, and <del>tags</del> supported :editormd-logo:;</li>
+<li><input checked disabled type="checkbox"> list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;</li>
+<li><input checked disabled type="checkbox"> [ ] :smiley: this is a complete item :smiley:;</li>
+<li><input disabled type="checkbox"> []this is an incomplete item <a href="#">test link</a> :fa-star: @pandao;</li>
+<li><input disabled type="checkbox"> [ ]this is an incomplete item :fa-star: :fa-gear:;<ul>
+<li><input disabled type="checkbox"> :smiley: this is an incomplete item <a href="#">test link</a> :fa-star: :fa-gear:;</li>
+<li><input disabled type="checkbox"> :smiley: this is  :fa-star: :fa-gear: an incomplete item <a href="#">test link</a>;</li>
+</ul>
+</li>
+</ul>
+<h4 id="反斜杠-Escape"><a href="#反斜杠-Escape" class="headerlink" title="反斜杠 Escape"></a>反斜杠 Escape</h4><p>*literal asterisks*</p>
+<p>[========]</p>
+<h3 id="科学公式-TeX-KaTeX"><a href="#科学公式-TeX-KaTeX" class="headerlink" title="科学公式 TeX(KaTeX)"></a>科学公式 TeX(KaTeX)</h3><p>$$E=mc^2$$</p>
+<p>行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。</p>
+<p>$$x > y$$</p>
+<p>$$(\sqrt{3x-1}+(1+x)^2)$$</p>
+<p>$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$</p>
+<p>多行公式：</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">\left( \sum\_{k=1}^n a\_k b\_k \right)^2</span><br><span class="line">\leq</span><br><span class="line">\left( \sum\_{k=1}^n a\_k^2 \right)</span><br><span class="line">\left( \sum\_{k=1}^n b\_k^2 \right)</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle</span><br><span class="line">    \frac{1}{</span><br><span class="line">        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{</span><br><span class="line">        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {</span><br><span class="line">        1+\frac{e^{-6\pi}}</span><br><span class="line">        {1+\frac{e^{-8\pi}}</span><br><span class="line">         {1+\cdots} }</span><br><span class="line">        }</span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f(x) = \int_{-\infty}^\infty</span><br><span class="line">    \hat f(\xi)\,e^{2 \pi i \xi x}</span><br><span class="line">    \,d\xi</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="分页符-Page-break"><a href="#分页符-Page-break" class="headerlink" title="分页符 Page break"></a>分页符 Page break</h3><blockquote>
+<p>Print Test: Ctrl + P</p>
+</blockquote>
+<p>[========]</p>
+<h3 id="绘制流程图-Flowchart"><a href="#绘制流程图-Flowchart" class="headerlink" title="绘制流程图 Flowchart"></a>绘制流程图 Flowchart</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=>start: 用户登陆</span><br><span class="line">op=>operation: 登陆操作</span><br><span class="line">cond=>condition: 登陆成功 Yes or No?</span><br><span class="line">e=>end: 进入后台</span><br><span class="line"></span><br><span class="line">st->op->cond</span><br><span class="line">cond(yes)->e</span><br><span class="line">cond(no)->op</span><br></pre></td></tr></tbody></table></figure></div>
+<p>[========]</p>
+<h3 id="绘制序列图-Sequence-Diagram"><a href="#绘制序列图-Sequence-Diagram" class="headerlink" title="绘制序列图 Sequence Diagram"></a>绘制序列图 Sequence Diagram</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Andrew->China: Says Hello</span><br><span class="line">Note right of China: China thinks\nabout it</span><br><span class="line">China-->Andrew: How are you?</span><br><span class="line">Andrew->>China: I am good thanks!</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3></pre></body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Fox Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/03/21/markdown/">http://yoursite.com/2020/03/21/markdown/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/03/08/hello-world/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Hello World</span></div></a></div></nav></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Fox Chen</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-sun-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/ClickShowText.js"></script></body></html>
